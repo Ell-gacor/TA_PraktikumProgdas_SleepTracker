@@ -1,0 +1,399 @@
+/* ===========================
+   DASHBOARD - SLEEP TRACKER
+=========================== */
+
+.dashboard-body {
+    font-family: "Georgia", "Garamond", "Palatino Linotype", "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('download (7).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
+    gap: 0;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+/* ===========================
+   LEFT PANEL - NAVIGATION
+=========================== */
+
+.dashboard-left {
+    background: linear-gradient(180deg, #283B73 0%, #283B73 100%);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto;
+    border-right: 1px solid #5E6C8C;
+    height: 100vh;
+}
+
+.dashboard-left::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dashboard-left::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dashboard-left::-webkit-scrollbar-thumb {
+    background: #8D99AE;
+    border-radius: 3px;
+}
+
+.dashboard-left::-webkit-scrollbar-thumb:hover {
+    background: #F8F9FA;
+}
+
+/* Header dengan Profil */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #5E6C8C;
+}
+
+.dashboard-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-pic-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.profile-pic-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.dashboard-profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid #5A4D40;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-pic-wrapper:hover .dashboard-profile-pic {
+    filter: brightness(0.9);
+}
+
+.dashboard-greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.greeting-text {
+    font-size: 12px;
+    color: #F8F9FA;
+    margin: 0;
+    font-weight: 500;
+}
+
+.greeting-name {
+    font-size: 16px;
+    color: #F8F9FA;
+    margin: 0;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.dashboard-menu-icon {
+    font-size: 20px;
+    color: #8D99AE;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.dashboard-menu-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Feature Navigation */
+.feature-nav h3 {
+    font-size: 13px;
+    color: #8D99AE;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feature-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feature-link {
+    padding: 12px 15px;
+    background: rgba(141, 153, 174, 0.1);
+    border: 1px solid #5E6C8C;
+    border-radius: 12px;
+    color: #F8F9FA;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: left;
+}
+
+.feature-link:hover {
+    background: #8D99AE;
+    color: #0E1A40;
+    border-color: #8D99AE;
+    transform: translateX(3px);
+}
+
+/* ===========================
+   RIGHT PANEL - CONTENT
+=========================== */
+
+.dashboard-right {
+    background-image: url('Gambar/download (7).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Input Card */
+.input-card {
+    background: #283B73;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.input-card h3 {
+    font-size: 14px;
+    color: #F8F9FA;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.sleep-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #e1e1e1;
+}
+
+.form-group input {
+    padding: 8px 12px;
+    border: 1px solid #5E6C8C;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: "Georgia", "Garamond", serif;
+    background: #1a2847;
+    color: #F8F9FA;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #dbdbdb;
+    box-shadow: 0 0 6px rgba(141, 153, 174, 0.5);
+}
+
+.submit-btn {
+    padding: 10px 16px;
+    background: #0E1A40;
+    color: #e0cdcd;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 4px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.success-msg {
+    background: rgba(141, 153, 174, 0.2);
+    color: #F8F9FA;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    margin-top: 6px;
+    border: 1px solid #8D99AE;
+}
+
+/* Content Card */
+.content-card {
+    background: #283B73;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+
+.content-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content-card::-webkit-scrollbar-track {
+    background: #1a2847;
+    border-radius: 10px;
+}
+
+.content-card::-webkit-scrollbar-thumb {
+    background: #5E6C8C;
+    border-radius: 10px;
+}
+
+.content-card::-webkit-scrollbar-thumb:hover {
+    background: #8D99AE;
+}
+
+/* Navigation Links */
+.dashboard-nav {
+    display: flex;
+    gap: 12px;
+    padding-top: 15px;
+    border-top: 2px solid #e0d5cc;
+}
+
+.nav-link {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(141, 153, 174, 0.1);
+    border: 1px solid #5E6C8C;
+    border-radius: 12px;
+    color: #8D99AE;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background: #8D99AE;
+    color: #0E1A40;
+    border-color: #8D99AE;
+}
+
+.nav-link.logout-link {
+    background: #F44336;
+    color: white;
+    border-color: #F44336;
+}
+
+.nav-link.logout-link:hover {
+    background: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.nav-link.logout-link {
+    background: #F44336;
+    color: white;
+    border-color: #F44336;
+}
+
+.nav-link.logout-link:hover {
+    background: #d32f2f;
+    border-color: #d32f2f;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1024px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-left {
+        border-right: none;
+        border-bottom: 1px solid #e0d5cc;
+        padding: 25px;
+    }
+
+    .feature-nav {
+        display: none;
+    }
+
+    .dashboard-header {
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-left,
+    .dashboard-right {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .dashboard-profile-pic {
+        width: 50px;
+        height: 50px;
+    }
+
+    .greeting-name {
+        font-size: 14px;
+    }
+
+    .input-card {
+        padding: 20px;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+}
