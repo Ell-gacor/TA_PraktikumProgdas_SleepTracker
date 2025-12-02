@@ -1,0 +1,61 @@
+{
+    "Ell": {
+        "password": "cadeltampan",
+        "created_at": "2025-11-26 12:00:00",
+        "last_reset": "2025-12-01",
+        "archived_weeks": [],
+        "stack": [
+            {
+                "duration": 7,
+                "date": "2025-12-01"
+            },
+            {
+                "duration": 3,
+                "date": "2025-12-02"
+            }
+        ],
+        "notes": [
+            "Laprak",
+            "Nonton Barcelona"
+        ],
+        "queue": []
+    },
+    "admin": {
+        "password": "12345",
+        "created_at": "2025-11-26 12:00:00",
+        "stack": [],
+        "notes": [],
+        "queue": []
+    },
+    "admin1": {
+        "password": "12345",
+        "created_at": "2025-11-26 12:00:00",
+        "stack": [],
+        "notes": [],
+        "queue": []
+    },
+    "Selvi": {
+        "password": "12345",
+        "created_at": "2025-11-26 13:03:15",
+        "stack": [
+            {
+                "duration": 5,
+                "date": "2025-11-26"
+            },
+            {
+                "duration": 3,
+                "date": "2025-11-26"
+            },
+            {
+                "duration": 4,
+                "date": "2025-11-26"
+            }
+        ],
+        "notes": [
+            "Belajar",
+            "Rapat OSIS",
+            "Panitia Acara"
+        ],
+        "queue": []
+    }
+}
